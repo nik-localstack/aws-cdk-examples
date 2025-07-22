@@ -101,7 +101,7 @@ class S3SnsSqsLambdaChainStack(Stack):
     CfnOutput(
       self,
       "UploadFileToS3Example",
-      value="aws s3 cp <local-path-to-file> s3://{}/".format(s3_bucket.bucket_name),
+      value="aws s3 cp <local-path-to-file> s3://{}/uploads/".format(s3_bucket.bucket_name),
       description="Upload a file to S3 (using AWS CLI) to trigger the SQS chain",
     )
     CfnOutput(
